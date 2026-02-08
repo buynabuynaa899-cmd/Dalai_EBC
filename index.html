@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dalayebs Сургуулийн Клубууд</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f4f6f8; color: #333; }
+    header { background: #0d47a1; color: white; padding: 30px 20px; text-align: center; }
+    nav { background: #1565c0; padding: 10px; text-align: center; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+    section { padding: 40px 20px; max-width: 1100px; margin: auto; }
+    h2 { text-align: center; margin-bottom: 30px; }
+    .clubs { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .card { background: white; border-radius: 8px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    .card h3 { margin-top: 0; color: #0d47a1; }
+    .events, .contact, form { background: white; border-radius: 8px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    footer { text-align: center; padding: 20px; background: #0d47a1; color: white; margin-top: 40px; }
+    button { background: #1e88e5; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; }
+    button:hover { background: #0d47a1; }
+    input, select { width: 100%; padding: 8px; margin-bottom: 15px; border-radius: 4px; border: 1px solid #ccc; }
+    label { font-weight: bold; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Dalayebs Сургуулийн Клубууд</h1>
+  <p>Бүх клубуудын нэгдсэн платформ</p>
+</header>
+
+<nav>
+  <a href="#clubs">Клубууд</a>
+  <a href="#events">Үйл ажиллагаа</a>
+  <a href="#join">Нэгдэх</a>
+  <a href="#contact">Холбоо барих</a>
+</nav>
+
+<section id="clubs">
+  <h2>Манай Клубууд</h2>
+  <div class="clubs">
+    <div class="card">
+      <h3>IT Клуб</h3>
+      <p>Программчлал, вэб хөгжүүлэлт, технологийн ур чадвар эзэмшнэ.</p>
+    </div>
+    <div class="card">
+      <h3>Англи Хэлний Клуб</h3>
+      <p>Яриа, сонсох, харилцааны ур чадвар сайжруулах.</p>
+    </div>
+    <div class="card">
+      <h3>Спортын Клуб</h3>
+      <p>Сагсан бөмбөг, хөлбөмбөг, волейбол, эрүүл амьдралын хэв маяг.</p>
+    </div>
+    <div class="card">
+      <h3>Урлагийн Клуб</h3>
+      <p>Зураг зурах, дизайн, бүтээлч үйл ажиллагаа.</p>
+    </div>
+  </div>
+</section>
+
+<section id="events">
+  <h2>Үйл ажиллагаа & Мэдээ</h2>
+  <div class="events">
+    <ul>
+      <li>📅 Клубын танилцуулга өдөр – 3-р сарын 15</li>
+      <li>🏆 Спортын тэмцээн – 4-р сарын 2</li>
+      <li>💻 Код бичих семинар – 4-р сарын 20</li>
+    </ul>
+  </div>
+</section>
+
+<section id="join">
+  <h2>Клубт Нэгдэх</h2>
+  <div class="events">
+    <form action="https://formsubmit.co/schoolclub@example.com" method="POST">
+      <label>Нэр:</label>
+      <input type="text" name="name" required>
+
+      <label>Имэйл:</label>
+      <input type="email" name="email" required>
+
+      <label>Хүссэн клуб:</label>
+      <select name="club" required>
+        <option value="IT Клуб">IT Клуб</option>
+        <option value="Англи Хэлний Клуб">Англи Хэлний Клуб</option>
+        <option value="Спортын Клуб">Спортын Клуб</option>
+        <option value="Урлагийн Клуб">Урлагийн Клуб</option>
+      </select>
+
+      <button type="submit">Илгээх</button>
+    </form>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Холбоо барих</h2>
+  <div class="contact">
+    <p><b>Сургууль:</b> Баяндалай Сургууль</p>
+    <p><b>Байршил:</b> Баяндалай, Өмнөговь, Монгол</p>
+    <p><b>Имэйл:</b> schoolclub@example.com</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Dalayebs Сургуулийн Клубууд</p>
+</footer>
+
+</body>
+</html>
