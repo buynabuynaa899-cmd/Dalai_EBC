@@ -138,67 +138,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dalayebs Сургуулийн Клубүүд</title>
+    <title>Dalayebs | Сургуулийн Клубуудын Нэгдсэн Платформ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <header>
-        <h1>Dalayebs Сургуулийн Клубүүд</h1>
-        <nav>
-            <a href="#">Клубүүд</a>
-            <a href="#">Үйл ажиллагаа</a>
-            <a href="#join">Нэгдэх</a>
-        </nav>
-    </header>
+    <nav class="navbar">
+        <div class="logo">DALAYEBS<span>.</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Нүүр</a></li>
+            <li><a href="#clubs">Клубүүд</a></li>
+            <li><a href="#events">Мэдээ</a></li>
+            <li><a href="#join" class="join-btn">Нэгдэх</a></li>
+        </ul>
+    </nav>
 
-    <main>
-        <section class="club-section">
-            <h2 class="title">Манай Клубүүд</h2>
-            <div class="club-grid">
-                <div class="club-card">
-                    <i class="fas fa-code icon"></i>
-                    <h3>IT Клуб</h3>
-                    <p>Программчлал, вэб хөгжүүлэлт, технологийн ур чадвар эзэмшинэ.</p>
-                </div>
-
-                <div class="club-card">
-                    <i class="fas fa-language icon"></i>
-                    <h3>Англи Хэлний Клуб</h3>
-                    <p>Яриа, сонсох, харилцааны ур чадвар сайжруулах.</p>
-                </div>
-
-                <div class="club-card">
-                    <i class="fas fa-basketball-ball icon"></i>
-                    <h3>Спортын Клуб</h3>
-                    <p>Сагсан бөмбөг, хөлбөмбөг, волейбол, эрүүл амьдралын хэв маяг.</p>
-                </div>
-
-                <div class="club-card">
-                    <i class="fas fa-paint-brush icon"></i>
-                    <h3>Урлагийн Клуб</h3>
-                    <p>Зураг зурах, дизайн, бүтээлч үйл ажиллагаа.</p>
-                </div>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Өөрийн <span>ирээдүйг</span> өнөөдөр бүтээ.</h1>
+            <p>Сургуулийн хамгийн идэвхтэй клубүүдэд нэгдэж, шинэ чадвар эзэмшин, найз нөхөдтэй болоорой.</p>
+            <div class="hero-btns">
+                <a href="#clubs" class="btn-primary">Клубүүд үзэх</a>
+                <a href="#events" class="btn-secondary">Хуваарь харах</a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="join" class="register-section">
-            <h2>Клубт бүртгүүлэх</h2>
-            <form class="reg-form">
-                <input type="text" placeholder="Нэр" required>
-                <input type="text" placeholder="Анги" required>
-                <select>
-                    <option>Клуб сонгох</option>
-                    <option>IT Клуб</option>
-                    <option>Англи Хэл</option>
-                    <option>Спорт</option>
-                    <option>Урлаг</option>
-                </select>
-                <button type="submit">Илгээх</button>
-            </form>
-        </section>
-    </main>
+    <section id="clubs" class="clubs">
+        <div class="container">
+            <h2 class="section-title">Манай Клубүүд</h2>
+            <div class="club-grid">
+                
+                <div class="glass-card">
+                    <div class="card-icon"><i class="fas fa-terminal"></i></div>
+                    <h3>IT Клуб</h3>
+                    <p>Код бичих, AI технологи болон вэб бүтээх сонирхолтой залуусын нэгдэл.</p>
+                    <span class="member-count"><i class="fas fa-users"></i> 45+ гишүүн</span>
+                </div>
+
+                <div class="glass-card">
+                    <div class="card-icon"><i class="fas fa-microphone-alt"></i></div>
+                    <h3>Англи Хэл</h3>
+                    <p>IELTS-д бэлдэх, ярианы чадвараа сайжруулах болон мэтгэлцээний клуб.</p>
+                    <span class="member-count"><i class="fas fa-users"></i> 60+ гишүүн</span>
+                </div>
+
+                <div class="glass-card">
+                    <div class="card-icon"><i class="fas fa-volleyball-ball"></i></div>
+                    <h3>Спортын Клуб</h3>
+                    <p>Сагсан бөмбөг, волейбол болон тэмцээн уралдааны мэдээллүүд.</p>
+                    <span class="member-count"><i class="fas fa-users"></i> 120+ гишүүн</span>
+                </div>
+
+                <div class="glass-card">
+                    <div class="card-icon"><i class="fas fa-palette"></i></div>
+                    <h3>Урлагийн Клуб</h3>
+                    <p>Зураг, график дизайн болон гар урлалаар өөрийгөө илэрхийлэх орчин.</p>
+                    <span class="member-count"><i class="fas fa-users"></i> 30+ гишүүн</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Dalayebs Сургууль. Бүх эрх хуулиар хамгаалагдсан.</p>
+    </footer>
 
 </body>
 </html>
+You sent
+:root {
+    --primary: #6366f1;
+    --secondary: #a855f7;
+    --dark: #0f172a;
+    --light: #f8fafc;
+    --glass: rgba(255, 255, 255, 0.8);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+body {
+    background: #f0f2f5;
+    color: var(--dark);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Навигаци */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--dark);
+}
+
+.logo span { color: var(--primary); }
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.join-btn {
+    background: var(--primary);
+    color: white !important;
+    padding: 10px 25px;
+    border-radius: 50px;
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    color: white;
+    padding: 0 20px;
+}
+
+.hero h1 { font-size: 3.5rem; margin-bottom: 20px; }
+.hero h1 span { text-decoration: underline; }
+.hero p { font-size: 1.2rem; max-width: 600px; margin: 0 auto 30px; opacity: 0.9; }
+
+.btn-primary, .btn-secondary {
+    padding: 15px 35px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn-primary { background: white; color: var(--primary); }
+.btn-secondary { border: 2px solid white; color: white; }
+
+/* Клубын картууд */
+.clubs { padding: 80px 8%; }
+.section-title { text-align: center; font-size: 2.5rem; margin-bottom: 50px; }
+
+.club-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.glass-card {
+    background: white;
+    padding: 40px;
+    border-radius: 24px;
+    border: 1px solid rgba(255,255,255,0.4);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.4s;
+}
+
+.glass-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    background: #eef2ff;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.member-count {
+    display: block;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+footer { text-align: center; padding: 40px; background: white; margin-top: 50px; }
