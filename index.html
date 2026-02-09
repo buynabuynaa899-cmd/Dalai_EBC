@@ -117,4 +117,46 @@
         </div>
     </div>
 </section>
+<section id="join" class="registration-container">
+    <div class="registration-card">
+        <div class="reg-text">
+            <h2>Одоо нэгдээрэй! 🚀</h2>
+            <p>Өөрийн сонирхож буй клубээ сонгоод, сургуулийнхаа хамгийн идэвхтэй нэг хэсэг болоорой.</p>
+        </div>
+        
+        <form id="clubForm" class="actual-form">
+            <div class="input-group">
+                <label>Бүтэн нэр</label>
+                <input type="text" id="userName" placeholder="Жишээ нь: Болд овогтой Дорж" required>
+            </div>
 
+            <div class="input-row">
+                <div class="input-group">
+                    <label>Анги</label>
+                    <input type="text" id="userGrade" placeholder="10Б" required>
+                </div>
+                <div class="input-group">
+                    <label>Утасны дугаар</label>
+                    <input type="tel" id="userPhone" placeholder="88******" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Сонирхож буй клуб</label>
+                <select id="userClub" required>
+                    <option value="" disabled selected>Сонгох...</option>
+                    <option value="it">IT Клуб</option>
+                    <option value="english">Англи Хэлний Клуб</option>
+                    <option value="sports">Спортын Клуб</option>
+                    <option value="art">Урлагийн Клуб</option>
+                </select>
+            </div>
+
+            <button type="submit" class="submit-btn">Бүртгүүлэх</button>
+        </form>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
