@@ -2,39 +2,67 @@
 <html lang="mn">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IT Клуб | Дэлгэрэнгүй</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body class="club-details-page">
+
     <div class="container">
-        <header class="club-header">
-            <h1>Код бичих сонирхолтой залуусын нэгдэл 💻</h1>
-            <p>IT Клубт тавтай морил!</p>
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Нүүр хуудас руу буцах</a>
+
+        <header class="club-hero">
+            <div class="icon-circle"><i class="fas fa-laptop-code"></i></div>
+            <h1>Мэдээлэл Технологийн Клуб</h1>
+            <p class="tagline">Ирээдүйн инженерүүдийн нэгдэл</p>
         </header>
 
-        <section class="club-details">
-            <div class="info-card">
-                <h3>👨‍🏫 Чиглүүлэгч багш</h3>
-                <p>Г. Болд (Мэдээлэл зүйн ахлах багш)</p>
-            </div>
-            
-            <div class="info-card">
-                <h3>⏰ Хуваарь</h3>
-                <p>Даваа, Лхагва: 15:30 - 17:00</p>
-                <p>Байршил: 304 тоот лаборатори</p>
+        <div class="details-grid">
+            <div class="info-sidebar">
+                <div class="info-box">
+                    <h3><i class="fas fa-user-tie"></i> Чиглүүлэгч багш</h3>
+                    <p><strong>Г. Болд</strong></p>
+                    <p>Ахлах зэргийн багш, 12 жилийн туршлагатай.</p>
+                </div>
+                <div class="info-box">
+                    <h3><i class="fas fa-clock"></i> Цагийн хуваарь</h3>
+                    <ul>
+                        <li>Мягмар: 15:30 - 17:00</li>
+                        <li>Пүрэв: 15:30 - 17:00</li>
+                    </ul>
+                    <p><i class="fas fa-map-marker-alt"></i> 304 тоот лаборатори</p>
+                </div>
             </div>
 
-            <div class="info-card">
-                <h3>🚀 Юу сурах вэ?</h3>
-                <ul>
-                    <li>HTML, CSS, JavaScript</li>
-                    <li>Python программчлал</li>
-                    <li>Робот угсралт</li>
-                </ul>
+            <div class="main-content">
+                <div class="content-box">
+                    <h3><i class="fas fa-list-check"></i> Клубийн хөтөлбөр</h3>
+                    <div class="curriculum-item">
+                        <span>01</span>
+                        <div>
+                            <h4>Вэб хөгжүүлэлтийн суурь</h4>
+                            <p>HTML, CSS болон JavaScript ашиглан анхны вэбсайтаа хийж сурна.</p>
+                        </div>
+                    </div>
+                    <div class="curriculum-item">
+                        <span>02</span>
+                        <div>
+                            <h4>Программчлалын логик</h4>
+                            <p>Python хэл дээр алгоритм болон өгөгдлийн бүтэц үзнэ.</p>
+                        </div>
+                    </div>
+                    <div class="curriculum-item">
+                        <span>03</span>
+                        <div>
+                            <h4>Төсөл дээр ажиллах</h4>
+                            <p>Багаар ажиллаж, сургуулийнхаа асуудлыг шийдсэн апп бүтээх.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
-
-        <a href="index.html" class="submit-btn">Буцах</a>
+        </div>
     </div>
+
 </body>
 </html>
