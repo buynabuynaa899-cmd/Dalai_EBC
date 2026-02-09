@@ -137,3 +137,49 @@ body {
 }
 
 footer { text-align: center; padding: 40px; background: white; margin-top: 50px; }
+/* Багш нарын карт */
+.mentor-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 8%;
+}
+
+.mentor-card {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.mentor-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Дугуй зураг */
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid var(--primary);
+}
+
+/* Мэдээний хэсэг */
+.events { padding: 60px 8%; background: #fff; }
+
+.event-item {
+    display: flex;
+    align-items: center;
+    background: #f8fafc;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 15px;
+    border-left: 5px solid var(--primary); /* Зүүн талдаа зураастай */
+}
+
+.date {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-right: 30px;
+    min-width: 60px;
+}
