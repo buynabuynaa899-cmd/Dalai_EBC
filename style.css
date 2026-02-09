@@ -269,3 +269,78 @@ footer { text-align: center; padding: 40px; background: white; margin-top: 50px;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
 }
+/* Клубийн дэлгэрэнгүй хуудасны стиль */
+.club-details-page {
+    background-color: #f8fafc;
+    padding: 40px 0;
+}
+
+.back-link {
+    text-decoration: none;
+    color: #6366f1;
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.club-hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    background: #e0e7ff;
+    color: #6366f1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0 auto 20px;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+}
+
+.info-box, .content-box {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.info-box h3, .content-box h3 {
+    color: #1e293b;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.curriculum-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 15px;
+}
+
+.curriculum-item span {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #cbd5e1;
+}
+
+.curriculum-item h4 {
+    color: #475569;
+    margin-bottom: 5px;
+}
