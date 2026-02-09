@@ -1,42 +1,44 @@
-// ... (Таны FirebaseConfig хэсэг хэвээрээ байна)
+// 1. Firebase модулиудыг дуудах
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
-// 2. Firebase-ийг эхлүүлэх
-firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
+// 2. Таны төслийн тохиргоо (Зураг дээрх мэдээлэл)
+const firebaseConfig = {
+    apiKey: "AIzaSyCkSj1k1rEislrK0SmTrUWDDd75d2QgbLE",
+    authDomain: "dalai-ebc.firebaseapp.com",
+    projectId: "dalai-ebc",
+    storageBucket: "dalai-ebc.firebasestorage.app",
+    messagingSenderId: "872196747374",
+    appId: "1:872196747374:web:6c7e2c5558e1a9eca6367f"
+};
 
-// 3. Бүртгэлийн функц
-async function registerUser(event) {
-    event.preventDefault();
+// 3. Firebase-ийг холбох
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
-    // Формоос мэдээллийг авах
-    const name = document.getElementById('userName').value;
-    const grade = document.getElementById('userGrade').value;
-    const phone = document.getElementById('userPhone').value;
-    const club = document.getElementById('userClub').value;
+// 4. Форм дээр ажиллах JS
+const clubForm = document.getElementById('clubForm');
 
+clubForm.addEventListener('submit', async (e) => {
+    e.preventDefault(); // Хуудсыг дахин ачааллахаас сэргийлнэ
+    
+    // Формын утгуудыг цуглуулах
     const userData = {
-        name: name,
-        grade: grade,
-        phone: phone,
-        club: club,
-        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+        fullName: document.getElementById('userName').value,
+        grade: document.getElementById('userGrade').value,
+        phone: document.getElementById('userPhone').value,
+        selectedClub: document.getElementById('userClub').value,
+        submittedAt: new Date() // Бүртгүүлсэн цаг
     };
 
     try {
-        // Firebase Firestore-д хадгалах
-        await db.collection("registrations").add(userData);
-        
-        // АНХААР: URL-д backticks (`) ашиглах ёстой
-        window.location.href = `${club}.html`; 
-        
+        // 'registrations' гэдэг нэртэй collection (хүснэгт) рүү датаг илгээх
+        const docRef = await addDoc(collection(db, "registrations"), userData);
+        console.log("Амжилттай хадгалагдлаа. ID: ", docRef.id);
+        alert("Бүртгэл амжилттай баталгаажлаа! Баярлалаа.");
+        clubForm.reset(); // Формыг цэвэрлэх
     } catch (error) {
         console.error("Алдаа гарлаа: ", error);
-        alert("Бүртгэл амжилтгүй боллоо!");
+        alert("Системийн алдаа гарлаа. Дахин оролдоно уу.");
     }
-}
-
-// 4. Формтой холбох
-const form = document.getElementById('clubForm');
-if (form) {
-    form.addEventListener('submit', registerUser);
-}
+});
