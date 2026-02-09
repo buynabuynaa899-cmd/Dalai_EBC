@@ -1,67 +1,50 @@
-<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
-
-    <script src="script.js"></script>
-</body>
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// 1. Зураг дээрх чиний Firebase тохиргоо
 const firebaseConfig = {
-  apiKey: "AIzaSyCkSj1k1rEislrK0SmTrUWDDd75d2QgbLE",
-  authDomain: "dalai-ebc.firebaseapp.com",
-  projectId: "dalai-ebc",
-  storageBucket: "dalai-ebc.firebasestorage.app",
-  messagingSenderId: "872196747374",
-  appId: "1:872196747374:web:6c7e2c5558e1a9eca6367f",
-  measurementId: "G-8EVRYZEQYC"
+    apiKey: "AIzaSyCksj1k1rEislrK0SmTrUWDDd75d2QgbLE",
+    authDomain: "dalai-ebc.firebaseapp.com",
+    projectId: "dalai-ebc",
+    storageBucket: "dalai-ebc.firebasestorage.app",
+    messagingSenderId: "872196747374",
+    appId: "1:872196747374:web:6c7e2c5558e1a9eca6367f",
+    measurementId: "G-8EVRYZEQYC"
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-// Firebase-ийн функцүүдийг ашиглан бүртгэл нэмэх
+// 2. Firebase-ийг эхлүүлэх
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+
+// 3. Бүртгэлийн функц
 async function registerUser(event) {
     event.preventDefault();
 
+    // Формоос мэдээллийг авах
+    const name = document.getElementById('userName').value;
+    const grade = document.getElementById('userGrade').value;
+    const phone = document.getElementById('userPhone').value;
+    const club = document.getElementById('userClub').value;
+
     const userData = {
-        name: document.getElementById('userName').value,
-        grade: document.getElementById('userGrade').value,
-        phone: document.getElementById('userPhone').value,
-        club: document.getElementById('userClub').value,
-        timestamp: new Date()
+        name: name,
+        grade: grade,
+        phone: phone,
+        club: club,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp() // Серверийн цаг
     };
 
     try {
-        // 'registrations' нэртэй цуглуулга руу өгөгдлийг илгээнэ
+        // Firebase Firestore-д хадгалах
         await db.collection("registrations").add(userData);
         
-        // Хадгалж дууссаны дараа тухайн клубийн хуудас руу шилжүүлнэ
-        window.location.href = ${userData.club}.html;
+        // Амжилттай болбол тухайн клубийн хуудас руу шилжих
+        window.location.href = ${club}.html;
     } catch (error) {
         console.error("Алдаа гарлаа: ", error);
-        alert("Бүртгэл амжилтгүй боллоо, дахин оролдоно уу.");
+        alert("Бүртгэл амжилтгүй боллоо!");
     }
 }
-document.getElementById('clubForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Хуудсыг шууд шинэчлэгдэхээс хамгаална
 
-    // Сонгосон клубийн утгыг авах (id-аар нь)
-    const selectedClub = document.getElementById('userClub').value;
-
-    if (selectedClub === "it") {
-        window.location.href = "it.html";
-    } else if (selectedClub === "english") {
-        window.location.href = "english.html";
-    } else if (selectedClub === "sports") {
-        window.location.href = "sports.html";
-    } else if (selectedClub === "art") {
-        window.location.href = "art.html";
-    } else {
-        alert("Та клубээ сонгоно уу!");
-    }
-});
+// 4. Формтой холбох (Формын ID "clubForm" байгаа эсэхийг шалгаарай)
+const form = document.getElementById('clubForm');
+if (form) {
+    form.addEventListener('submit', registerUser);
+}
