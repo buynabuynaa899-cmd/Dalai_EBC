@@ -1,3 +1,26 @@
+// Firebase-ийн функцүүдийг ашиглан бүртгэл нэмэх
+async function registerUser(event) {
+    event.preventDefault();
+
+    const userData = {
+        name: document.getElementById('userName').value,
+        grade: document.getElementById('userGrade').value,
+        phone: document.getElementById('userPhone').value,
+        club: document.getElementById('userClub').value,
+        timestamp: new Date()
+    };
+
+    try {
+        // 'registrations' нэртэй цуглуулга руу өгөгдлийг илгээнэ
+        await db.collection("registrations").add(userData);
+        
+        // Хадгалж дууссаны дараа тухайн клубийн хуудас руу шилжүүлнэ
+        window.location.href = ${userData.club}.html;
+    } catch (error) {
+        console.error("Алдаа гарлаа: ", error);
+        alert("Бүртгэл амжилтгүй боллоо, дахин оролдоно уу.");
+    }
+}
 document.getElementById('clubForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Хуудсыг шууд шинэчлэгдэхээс хамгаална
 
