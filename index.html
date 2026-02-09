@@ -74,41 +74,7 @@
 
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="mn">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dalayebs Сургуулийн Клубууд</title>
-  <style>
-    body { margin: 0; font-family: Arial, sans-serif; background: #f4f6f8; color: #333; }
-    header { background: #0d47a1; color: white; padding: 30px 20px; text-align: center; }
-    nav { background: #1565c0; padding: 10px; text-align: center; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    nav a:hover { text-decoration: underline; }
-    section { padding: 40px 20px; max-width: 1100px; margin: auto; }
-    h2 { text-align: center; margin-bottom: 30px; }
 
-    /* 3D hover эффект картуудад */
-    .clubs { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-    .card { background: white; border-radius: 8px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; opacity: 0; transform: translateY(20px); }
-    .card.show { opacity: 1; transform: translateY(0); }
-    .card:hover { transform: translateY(-10px) rotateX(5deg) rotateY(5deg); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
-    .card h3 { margin-top: 0; color: #0d47a1; }
-
-    .events, .contact, form { background: white; border-radius: 8px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
-    .events.show, .contact.show, form.show { opacity: 1; transform: translateY(0); }
-
-    footer { text-align: center; padding: 20px; background: #0d47a1; color: white; margin-top: 40px; }
-    
-    button { background: #1e88e5; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease; }
-    button:hover { transform: translateY(-3px) scale(1.05); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
-
-    input, select { width: 100%; padding: 8px; margin-bottom: 15px; border-radius: 4px; border: 1px solid #ccc; }
-    label { font-weight: bold; }
-  </style>
-</head>
-<body>
 
 <header>
   <h1>Dalayebs Сургуулийн Клубууд</h1>
@@ -138,7 +104,7 @@
 <section id="join">
   <h2>Клубт Нэгдэх</h2>
   <div class="events fade-in">
-    <form action="https://formsubmit.co/buynabuynaa899@gmail.com" method="POST">
+    <form action="https://formsubmit.co/schoolclub@example.com" method="POST">
       <label>Нэр:</label>
       <input type="text" name="name" required>
 
@@ -161,7 +127,7 @@
 <section id="contact">
   <h2>Холбоо барих</h2>
   <div class="contact fade-in">
-    <p><b>Сургууль:</b> Баяндалай Сургууль</p>
+    <p><b>Сургууль:</b> Далай ЕБС</p>
     <p><b>Байршил:</b> Баяндалай, Өмнөговь, Монгол</p>
     <p><b>Имэйл:</b> schoolclub@example.com</p>
   </div>
